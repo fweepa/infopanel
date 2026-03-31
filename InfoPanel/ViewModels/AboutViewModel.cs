@@ -7,6 +7,9 @@ namespace InfoPanel.ViewModels
 {
     public class AboutViewModel: ObservableObject
     {
+        /// <summary>Fork/preview channel shown on About (semver-safe; does not replace <see cref="VersionHelper.AppVersion"/> for updates).</summary>
+        public string PreviewChannelVersion { get; } = "1.4.x-fweepa-preview";
+
         public string Version { get; set; }
 
         public VersionModel? VersionModel { get; set; }
